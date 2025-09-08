@@ -1,9 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: nginx
+  namespace: nginx-ns
   labels:
     app: nginx
-  name: nginx
 spec:
   replicas: 1
   selector:
@@ -12,6 +13,8 @@ spec:
   strategy: {}
   template:
     metadata:
+      name: nginx
+      namespace: nginx-ns
       labels:
         app: nginx
     spec:
