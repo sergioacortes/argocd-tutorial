@@ -7,10 +7,10 @@ spec:
   project: default
   source:
     chart: httpbin
-    version: v2
     repoURL: 'https://matheusfm.dev/charts'
     targetRevision: 0.1.1
     helm:
+      version: v2
       releaseName: httpbin
   destination:
     server: 'https://kubernetes.default.svc'
