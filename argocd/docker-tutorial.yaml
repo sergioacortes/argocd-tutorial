@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://ghcr.io/sergioacortes/charts/'
+    repoURL: 'oci://ghcr.io/sergioacortes/charts/'
     chart: dockerwalkthrough
     targetRevision: 0.0.1-42
     helm:
