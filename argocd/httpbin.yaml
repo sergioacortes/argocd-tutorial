@@ -10,7 +10,7 @@ spec:
     repoURL: 'https://matheusfm.dev/charts'
     targetRevision: 0.1.1
     helm:
-      releaseName: httpbin
+      releaseName: matheusfm/httpbin
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
