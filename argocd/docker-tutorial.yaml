@@ -8,7 +8,7 @@ spec:
   source:
     path: .
     repoURL: oci://ghcr.io/sergioacortes/charts/dockerwalkthrough
-    targetRevision: 15.9.0
+    targetRevision: 0.4.0-rev.1
     helm:
       releaseName: dockerwalkthrough
       values: |
