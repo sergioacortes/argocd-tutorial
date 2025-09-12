@@ -12,11 +12,11 @@ spec:
     targetRevision: 0.1.0-rev.1
     helm:
       releaseName: dockerwalkthroughprivate
-      passCredentials: true
       values: |
         service:
           type: NodePort
         image:
+          repository: ghcr.io/sergioacortes/docker-walkthrough-private/client
           tag: 0.1.0-rev.1
   destination:
     server: 'https://kubernetes.default.svc'
