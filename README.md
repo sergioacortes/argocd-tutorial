@@ -9,6 +9,13 @@
 * kubectl port-forward service/argocd-server -n argocd 8081:443
 * kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
 
+
+## Create private docker registry credentials on kubernetes cluster
+
+kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=sergioacortes --docker-password=<your-password> --docker-email=sergioacortes@msn.com
+
+
+
 ## Github tutorial
 https://github.com/sergioacortes/argocd-tutorial.git
 
