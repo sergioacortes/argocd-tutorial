@@ -13,6 +13,7 @@ spec:
       releaseName: dockerwalkthroughprivate
       values: |
         namespace: dev
+        replicas: 3
         service:
           type: NodePort
         image:
