@@ -6,7 +6,6 @@ metadata:
 spec:
   project: default
   source:
-    path: .
     repoURL: ghcr.io/sergioacortes/charts
     chart: dockerwalkthroughprivate
     targetRevision: 0.1.0-rev.1
