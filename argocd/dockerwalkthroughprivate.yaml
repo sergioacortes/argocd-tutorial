@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dockerwalkthrough
+  name: dockerwalkthroughprivate
   namespace: argocd
 spec:
   project: default
   source:
     path: .
     repoURL: oci://ghcr.io/sergioacortes/charts/dockerwalkthroughprivate
-    targetRevision: 0.5.0-rev.1
+    targetRevision: 0.1.0-rev.1
     helm:
       releaseName: dockerwalkthroughprivate
       values: |
         service:
           type: NodePort
         image:
-          tag: 0.5.0-rev.1
+          tag: 0.1.0-rev.1
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
