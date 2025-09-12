@@ -12,8 +12,15 @@
 
 ## Create private docker registry credentials on kubernetes cluster
 
-kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=sergioacortes --docker-password=<your-password> --docker-email=sergioacortes@msn.com
+The configuration to pull images from private container registry is made through kubernates. You can find how to pull images from private registry on the official kubernetes documentation.
 
+* [How to pull image from private registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
+* [Configure through service account](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-imagepullsecrets-to-a-service-account)
+
+The following code shows how to create a definition file with the private registry credentials
+```
+kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=sergioacortes --docker-password=<your-password> --docker-email=sergioacortes@msn.com --dry-run=client -o yaml > ghcr-credentials.yaml
+```
 
 
 ## Github tutorial
