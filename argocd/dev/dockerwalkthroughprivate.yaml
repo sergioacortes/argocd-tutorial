@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dockerwalkthroughprivate
+  name: dockerwalkthroughprivate-dev
   namespace: argocd
 spec:
   project: default
@@ -12,6 +12,7 @@ spec:
     helm:
       releaseName: dockerwalkthroughprivate
       values: |
+        namespace: dockerwalkthroughprivate-dev
         service:
           type: NodePort
         image:
