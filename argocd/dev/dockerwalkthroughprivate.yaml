@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dockerwalkthroughprivate-dev
+  name: dev
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: ghcr.io/sergioacortes/charts
     chart: dockerwalkthroughprivate
-    targetRevision: 0.2.0-rev.1
+    targetRevision: 0.3.0-rev.1
     helm:
       releaseName: dockerwalkthroughprivate
       values: |
-        namespace: dockerwalkthroughprivate-dev
+        namespace: dev
         service:
           type: NodePort
         image:
           repository: ghcr.io/sergioacortes/docker-walkthrough-private/client
-          tag: 0.2.0-rev.1
+          tag: 0.3.0-rev.1
         imagePullSecrets:
           - name: ghcr-credentials
   destination:
