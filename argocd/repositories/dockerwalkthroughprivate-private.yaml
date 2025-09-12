@@ -11,5 +11,5 @@ stringData:
   enableOCI: "true"
   type: helm
   username: "sergioacortes"
-  password: "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"
+  password: ""
   ForceHttpBasicAuth: "true"
