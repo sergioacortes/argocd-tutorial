@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dockerwalkthroughprivate-oci-crendentials
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: dockerwalkthroughprivate
+  url: ghcr.io/sergioacortes/charts
+  enableOCI: "true"
+  type: helm
+  username: "sergioacortes"
+  password: "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"
+  ForceHttpBasicAuth: "true"

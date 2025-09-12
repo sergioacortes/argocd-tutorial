@@ -7,7 +7,8 @@ spec:
   project: default
   source:
     path: .
-    repoURL: oci://ghcr.io/sergioacortes/charts/dockerwalkthroughprivate
+    repoURL: ghcr.io/sergioacortes/charts
+    chart: dockerwalkthroughprivate
     targetRevision: 0.1.0-rev.1
     helm:
       releaseName: dockerwalkthroughprivate
