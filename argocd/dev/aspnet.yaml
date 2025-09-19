@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: ghcr.io/sergioacortes/charts
     chart: dotnet-app
-    targetRevision: 0.4.0-rev.1
+    targetRevision: 0.5.0-rev.1
     helm:
       releaseName: dotnet-app
       values: |
@@ -18,7 +18,7 @@ spec:
           type: NodePort
         image:
           repository: ghcr.io/sergioacortes/images/dotnet-app
-          tag: 0.4.0-rev.1
+          tag: 0.5.0-rev.1
         imagePullSecrets:
           - name: ghcr-credentials
   destination:
