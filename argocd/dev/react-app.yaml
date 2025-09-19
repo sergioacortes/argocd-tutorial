@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: ghcr.io/sergioacortes/charts
+    chart: react-app
+    targetRevision: 0.1.0-rev.1
+    helm:
+      releaseName: react-app
+      values: |
+        namespace: dev
+        replicaCount: 3
+        service:
+          type: NodePort
+        image:
+          repository: ghcr.io/sergioacortes/images/react-app
+          tag: 0.1.0-rev.1
+        # imagePullSecrets:
+        #   - name: ghcr-credentials
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
