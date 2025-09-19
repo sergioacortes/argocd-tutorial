@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: ghcr.io/sergioacortes/charts
     chart: docker-java
-    targetRevision: 0.2.0-rev.1
+    targetRevision: 0.3.0-rev.1
     helm:
       releaseName: docker-java
       values: |
@@ -18,13 +18,13 @@ spec:
           type: NodePort
         image:
           repository: ghcr.io/sergioacortes/images/docker-java
-          tag: 0.2.0-rev.1
+          tag: 0.3.0-rev.1
         livenessProbe:
           httpGet:
-            path: /api/livez
+            path: /livez
         readinessProbe:
           httpGet:
-            path: /api/readyz
+            path: /readyz
         # imagePullSecrets:
         #   - name: ghcr-credentials
   destination:
