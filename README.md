@@ -19,7 +19,7 @@ The configuration to pull images from private container registry is made through
 
 The following code shows how to create a definition file with the private registry credentials
 ```
-kubectl create secret docker-registry regcred --docker-server=ghcr.io --docker-username=sergioacortes --docker-password=<your-password> --docker-email=sergioacortes@msn.com --dry-run=client -o yaml > ghcr-credentials.yaml
+kubectl create secret docker-registry ghcr-credentials --docker-server=ghcr.io --docker-username=sergioacortes --docker-password=<your-password> --docker-email=sergioacortes@msn.com --namespace=dev --dry-run=client -o yaml > ghcr-credentials.yaml
 ```
 
 
